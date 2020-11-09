@@ -1,0 +1,356 @@
+/*------------------------
+Master Stylesheet
+Website : Beautiful Escape Private Resort - Hotel Resort Website
+Author : Cristian To-ong
+Website : 
+Default Color : White
+Text Color : Black
+Body Font : 'Poppins', sans-serif, 16px
+----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* General styles */
+*, :after, :before {
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px!important;
+    line-height: 2;
+    /* font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif; */
+}
+a {
+    color: White!important;
+    text-decoration: none;
+}
+/* component styles */
+.section-title {
+    padding: 7.875rem 0px;
+}
+.section-title h1 {
+    text-transform: uppercase;
+    letter-spacing: .375rem!important;
+    font-weight: 300;
+}
+
+.cta-btn {
+    text-transform: uppercase;
+    background: #FF8214;
+    padding: 16px 35px;
+    text-decoration: none!important;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+.cta-btn-black {
+    text-transform: uppercase;
+    background: #000;
+    text-decoration: none!important;
+    font-weight: 300;
+    padding: 10px 10px;
+}
+.gallery-prev-btn {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+.gallery-prev-btn img {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.gallery-next-btn {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+.gallery-next-btn img {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.arrow-white-full-next {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s ease;
+}
+.arrow-white-full-prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.gallery-next-btn:hover .arrow-white-full-next{
+    opacity: 1;
+}
+.gallery-prev-btn:hover .arrow-white-full-prev{
+    opacity: 1;
+}
+
+
+/* apply black color in navbar when scroll down */
+.nav-bg-black {
+    background-color: rgba(0,0,0,.8)!important;
+    padding: 0 2rem!important;
+}
+
+
+
+/* Keyframes */
+@keyframes zoominoutsmoothloop {
+    0% {
+        transform: scale(1.4,1.4);
+    }
+    50% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1.4,1.4);
+    }
+}
+
+
+/* -------------------------Navigation---------------------- */
+#hero .navbar {
+    padding: 0 54px;
+    padding-top: 0!important;
+    transition: .5s ease;
+    
+}
+#hero .navbar .navbar-brand {
+    padding: 1.25rem 0;
+    width: 90px;
+    height: 90px
+}
+#hero nav a img {
+    width: 100%;
+    height: 100%;
+}
+
+#hero .navbar .navbar-nav a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 3.5rem;
+    font-size: 14px!important;
+}
+
+/* -------------------------Hero Header---------------------- */
+
+#hero {
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+#hero figure {
+    background-image: url('../images/all/10.jpg');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: zoominoutsmoothloop 30s infinite ;
+}
+#hero figure::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    display: block;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+#hero .header_content {
+    position: absolute;
+    top: 30%;
+}
+
+#hero .header_content .header_title h1 {
+    font-size: 2.9rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#hero .header_content .header_title h2 {
+    font-size: 1.5625rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 7.142rem;
+}
+
+#hero .header_content .header_paragraph {
+    width: 30%;
+    margin: 0 auto;
+}
+#hero .header_content .header_paragraph p {
+    font-size: 1.428rem;
+}
+
+
+/* -------------------------Rooms Section---------------------- */
+#rooms {
+    min-height: 68vh;
+}
+.rooms_card {
+    position: relative;
+    width: 360px;
+    height: 388px;
+    overflow: hidden;
+    
+}
+.rooms_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.rooms_card .rooms_card_desc {
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 4rem;
+    transform: translate(-10%, 73%);
+    transition: .3s ease;
+}
+.rooms_card .rooms_card_desc h2 {
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.rooms_card .rooms_card_desc p {
+    font-weight: 300;
+}
+.rooms_card .rooms_card_desc .room_price {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+.rooms_card .rooms_card_desc:hover {
+    transform: translate(0, 0);
+}
+
+/* -------------------------Gallery Section---------------------- */
+#gallery {
+    min-height: 30vh!important;
+}
+.gallery_wrapper {
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+
+.carousel-item   {
+    min-height: 400px!important;
+}
+
+.carousel-item img {
+    height: 100%!important;
+    width: 100%!important;
+}
+
+/* -------------------------Amenities Section---------------------- */
+#amenities {
+    min-height: 100vh;
+}
+
+#amenities .col-md-4 {
+    text-align: center;
+    margin-bottom: 150px;
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+
+#amenities .col-md-4 .amenities_icon {
+    width: 81px;
+    height: 62px;
+    margin-bottom: 48px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#amenities .col-md-4 .amenities_icon img {
+    width: 100%;
+    height: 100%;
+}
+#amenities .col-md-4 h2 {
+    margin-bottom: 48px;
+    font-weight: 300;
+    font-size: 1.785rem;
+    text-transform: uppercase;
+}
+#amenities .col-md-4 p {
+    width: 60%;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 1.0714rem;
+}
+
+/* -------------------------Testimonial Section---------------------- */
+.testimonial-slider {
+    position: relative;
+
+}
+.testimonial-slide {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.testimonial-slide.current {
+    opacity: 1;
+}
+
+#testimonials {
+    min-height: 60vh;
+    /* background: url("../images/all/13.jpg") no-repeat center 12%; */
+    background-image: url("../images/all/13.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 11%;
+
+
+}
+#testimonials .testimonial_img {
+    width: 167px;
+    height: 167px;
+    font-family: Montserrat, 'sans-serif';
+}
+#testimonials .testimonial_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+#testimonials .testimonial_img .testimonial_name {
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+#testimonials .testimonial {
+    font-family: 'Playfair Display', serif!important;
+    font-weight: 700;
+    font-size: 2.142rem;
+}
+
+#testimonials .buttons {
+    position: absolute;
+
+right: 12%;
+}
+#testimonials .buttons img {
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+}
+
