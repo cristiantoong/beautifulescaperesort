@@ -465,8 +465,6 @@ right: 12%;
 /* Large Devices */
 @media (min-width: 992px) and (max-width: 1199px) {
    #rooms .row .col-lg-4 .rooms_card {
-       /* justify-content: space-between!important; */
-       /* margin-right: 2rem; */
        max-width: 100%;
    } 
 }
@@ -541,7 +539,7 @@ right: 12%;
 }
 
 /* Extra Small devices */
-@media (max-width: 575px) {
+@media (min-width: 450px) and (max-width: 767px) {
     #hero .header_title h1{
         font-size: 2rem!important;
     }
@@ -551,10 +549,15 @@ right: 12%;
     #hero .header_paragraph p{
         font-size: 1.2rem!important;
     }
+    
 
     #rooms .row .col-lg-4 {
         margin-bottom: 2rem;
     } 
+
+    .carousel-item {
+        height: 400px!important;
+    }
 
     #contact-us {
         padding-bottom: 7.875rem;
@@ -562,9 +565,6 @@ right: 12%;
         padding-right: 2rem;
     }
 
-    /* #contact-us .section-title h1{
-        text-align: left;
-    } */
 
     #contact-us .col-lg-3 {
         margin-bottom: 4rem;
@@ -597,4 +597,66 @@ right: 12%;
 }
 
 
-  
+@media  (max-width: 450px) {
+    #hero .header_title h1{
+        font-size: 2rem!important;
+    }
+    #hero .header_title h2{
+        font-size: 1.5rem!important;
+    }
+    #hero .header_paragraph p{
+        font-size: 1.2rem!important;
+    }
+
+    #rooms .row .col-lg-4 {
+        margin-bottom: 2rem;
+    } 
+
+    .carousel-item {
+        height: 400px!important;
+    }
+
+    #contact-us {
+        padding-bottom: 7.875rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+
+    #contact-us .col-lg-3 {
+        margin-bottom: 4rem;
+    }
+
+    #contact-us .col-lg-9 {
+        padding-left: 1rem!important;
+    }
+    #testimonials {
+        min-height: 100vh!important;
+    }
+
+    #testimonials .testimonial_img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 2rem;
+    }
+
+    #testimonials .testimonial {
+        font-size: 2rem;
+    } 
+
+    
+    #testimonials .col-lg-3 {
+        margin-bottom: 10rem;
+        text-align: center;
+        text-align: center;
+    }
+    #testimonials .col-lg-9 {
+        text-align: center;
+    }
+
+
+    #testimonials .buttons {
+        bottom: 12%;
+        right: 40%!important;
+    }
+}
