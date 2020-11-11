@@ -26,9 +26,17 @@ html, body {
 }
 a {
     color: White!important;
-    text-decoration: none;
+    text-decoration: none!important;
 }
 /* component styles */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
 .section-title {
     padding: 7.875rem 0px;
 }
@@ -226,6 +234,9 @@ a {
     font-size: 20px;
     font-weight: 300;
     text-transform: uppercase;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-left: 3.4rem;
 }
 .rooms_card .rooms_card_desc p {
     font-weight: 300;
@@ -236,8 +247,13 @@ a {
 }
 
 
-.rooms_card .rooms_card_desc:hover {
+.rooms_card:hover .rooms_card_desc {
     transform: translate(0, 0);
+    padding-top: 3rem;
+    padding-left: 3.4rem;
+}
+.rooms_card:hover h2 {
+    padding-left: 0;
 }
 
 /* -------------------------Gallery Section---------------------- */
@@ -312,7 +328,8 @@ a {
 }
 
 #testimonials {
-    min-height: 60vh;
+    position: relative;
+    min-height: 69vh;
     /* background: url("../images/all/13.jpg") no-repeat center 12%; */
     background-image: url("../images/all/13.jpg");
     background-repeat: no-repeat;
@@ -321,10 +338,13 @@ a {
 
 
 }
+
+
 #testimonials .testimonial_img {
     width: 167px;
     height: 167px;
     font-family: Montserrat, 'sans-serif';
+
 }
 #testimonials .testimonial_img img{
     width: 100%;
@@ -334,6 +354,7 @@ a {
 }
 #testimonials .testimonial_img .testimonial_name {
     font-weight: 500;
+    font-size: 1.428rem;
     letter-spacing: 3px;
 }
 
@@ -345,6 +366,8 @@ a {
 
 #testimonials .buttons {
     position: absolute;
+    bottom: 19%;
+    right: 24%!important;
 
 right: 12%;
 }
@@ -352,5 +375,90 @@ right: 12%;
     width: 46px;
     height: 46px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
+/* -------------------------Contact Us Section---------------------- */
+/* .flex {
+    display: flex;
+    justify-content: space-around;
+} */
+#contact-us {
+    min-height: 90vh;
+    background-color: #2E302B;
+}
+
+/* #contact-us .row {
+    padding-bottom: 7.875rem;
+} */
+
+#contact-us h3 {
+    text-transform: uppercase!important;
+    font-weight: 300;
+    font-size: 1.428rem;
+}
+#contact-us .address {
+    font-size: 1.142rem;
+}
+
+#contact-us .socials img {
+    width: 24px;
+    height: 24px;
+}
+#contact-us .socials p {
+    font-size: 1.142rem;
+}
+
+#contact-us  .col-md-9 {
+    padding-left: 86px!important;
+}
+
+#contact-us .contact_inputs {
+    margin-bottom: 58px;
+}
+
+#contact-us label {
+    font-size: 1.142rem;
+}
+#contact-us input, #contact-us textarea {
+    border-radius: 0!important;
+    font-size: 14px;
+    padding: 25px;
+}
+
+#contact-us input:focus {
+    border-color: #FF8214;
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+#contact-us textarea:focus {
+    border-color: #FF8214;
+    outline:0px !important;
+    box-shadow: none !important;
+    -webkit-appearance:none;
+}
+
+#contact-us .contact_btn {
+    text-transform: uppercase;
+    background: #FF8214;
+    padding: 12px 20px;
+    text-decoration: none!important;
+    font-weight: 300;
+}
+
+/* --------------- MEDIA QUERIES --------------- */
+/* if less than 768px the style will apply */
+/* @media(max-width: 768px) {
+    #showcase {
+        min-height: 500px;
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    .mb-resp {
+        margin-bottom: 1rem;
+    }
+} */
