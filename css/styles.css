@@ -14,6 +14,7 @@ Body Font : 'Poppins', sans-serif, 16px
 /* General styles */
 *, :after, :before {
     box-sizing: border-box;
+    animation: loadFade .5s ease-out;
 }
 html, body {
     padding: 0;
@@ -124,6 +125,15 @@ a {
         transform: scale(1.4,1.4);
     }
 }
+
+@keyframes loadFade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 
 /* -------------------------Navigation---------------------- */
@@ -265,13 +275,14 @@ a {
     padding-left: 0!important;
 }
 
-.carousel-item   {
-    min-height: 400px!important;
+.carousel-item {
+    height: 800px!important;
 }
 
 .carousel-item img {
     height: 100%!important;
     width: 100%!important;
+    object-fit: cover;
 }
 
 /* -------------------------Amenities Section---------------------- */
@@ -409,7 +420,7 @@ right: 12%;
     font-size: 1.142rem;
 }
 
-#contact-us  .col-md-9 {
+#contact-us  .col-lg-9 {
     padding-left: 86px!important;
 }
 
@@ -448,17 +459,142 @@ right: 12%;
 }
 
 /* --------------- MEDIA QUERIES --------------- */
-/* if less than 768px the style will apply */
-/* @media(max-width: 768px) {
-    #showcase {
-        min-height: 500px;
+/* Extra Large Devices */
+@media (min-width: 1200px) {}
 
-        h1 {
-            font-size: 4rem;
-        }
+/* Large Devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+   #rooms .row .col-lg-4 .rooms_card {
+       /* justify-content: space-between!important; */
+       /* margin-right: 2rem; */
+       max-width: 100%;
+   } 
+}
+
+/* Medium Devices */
+@media (min-width: 768px) and (max-width: 991px) {
+    #rooms .row .col-lg-4 {
+        margin-bottom: 2rem;
+    } 
+
+    #testimonials .buttons {
+        bottom: 14%;
+        right: 18%!important;
     }
 
-    .mb-resp {
-        margin-bottom: 1rem;
+    #contact-us {
+        padding-bottom: 7.875rem;
     }
-} */
+
+    #contact-us .col-lg-3 {
+        margin-bottom: 4rem;
+    }
+    #contact-us .col-lg-9 {
+        padding-left: 0!important;
+    }
+}
+
+/* Small devices */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    #hero .header_title h1{
+        font-size: 2.5rem!important;
+    }
+    #hero .header_title h2{
+        font-size: 1.5rem!important;
+    }
+    #hero .header_paragraph p{
+        font-size: 1.5rem!important;
+    }
+
+    #rooms .row .col-lg-4 {
+        margin-bottom: 2rem;
+    } 
+
+    #testimonials {
+        height: 80vh!important;
+    }
+    #testimonials .testimonial_img img{
+        width: 150px;
+        height: 150px;
+    }
+
+    #testimonials .testimonial {
+        font-size: 2rem;
+    }
+    
+    #testimonials .col-sm-9 {
+        padding-left: 2.5rem;
+    }
+
+    #contact-us {
+        padding-bottom: 7.875rem;
+    }
+
+    #contact-us .col-lg-3 {
+        margin-bottom: 4rem;
+    }
+
+    #contact-us .col-lg-9 {
+        padding-left: 0!important;
+    }
+}
+
+/* Extra Small devices */
+@media (max-width: 575px) {
+    #hero .header_title h1{
+        font-size: 2rem!important;
+    }
+    #hero .header_title h2{
+        font-size: 1.5rem!important;
+    }
+    #hero .header_paragraph p{
+        font-size: 1.2rem!important;
+    }
+
+    #rooms .row .col-lg-4 {
+        margin-bottom: 2rem;
+    } 
+
+    #contact-us {
+        padding-bottom: 7.875rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* #contact-us .section-title h1{
+        text-align: left;
+    } */
+
+    #contact-us .col-lg-3 {
+        margin-bottom: 4rem;
+    }
+
+    #contact-us .col-lg-9 {
+        padding-left: 1rem!important;
+    }
+    #testimonials {
+        height: 100vh!important;
+    }
+
+    
+    #testimonials .col-lg-3 {
+        margin-bottom: 10rem;
+        text-align: center;
+        text-align: center;
+    }
+    #testimonials .col-lg-9 {
+        text-align: center;
+    }
+
+
+    #testimonials .buttons {
+        bottom: 12%;
+        right: 40%!important;
+    }
+
+    
+}
+
+
+  
