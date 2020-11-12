@@ -30,6 +30,21 @@ a {
     text-decoration: none!important;
 }
 /* component styles */
+.scrollToTop {
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: none;
+    /* opacity: 0; */
+    z-index: 1;
+}
+.scrollToTop img {
+    width: 50px;
+    height: 50px;
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -111,6 +126,15 @@ a {
     padding: 0 2rem!important;
 }
 
+.fade-in {
+    display: block;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
 
 
 /* Keyframes */
@@ -134,6 +158,15 @@ a {
       opacity: 1;
     }
   }
+
+  @keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 /* -------------------------Navigation---------------------- */
