@@ -631,6 +631,11 @@ right: 12%;
 
 
 @media  (max-width: 450px) {
+    .section-title h1 {
+        font-weight: 300;
+        font-size: 2rem;
+    }
+
     #hero .header_title h1{
         font-size: 2rem!important;
     }
@@ -667,14 +672,26 @@ right: 12%;
         min-height: 100vh!important;
     }
 
+    #testimonials .section-title {
+        padding: 5rem 0!important;
+    }
+
     #testimonials .testimonial_img {
         width: 100px;
         height: 100px;
         margin-bottom: 2rem;
     }
 
+    #testimonials .testimonial_date {
+        font-size: 0.8rem;
+    }
+
+    #testimonials .testimonial_name {
+        font-size: 1rem!important;
+    }
+
     #testimonials .testimonial {
-        font-size: 2rem;
+        font-size: 1.2rem;
     } 
 
     
@@ -689,7 +706,8 @@ right: 12%;
 
 
     #testimonials .buttons {
-        bottom: 12%;
-        right: 40%!important;
+        bottom: 10%;
+        right: 35%!important;
     }
 }
+

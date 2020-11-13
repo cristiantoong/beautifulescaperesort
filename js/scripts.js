@@ -80,24 +80,15 @@ $(window).on("scroll", function() {
     }
 });  
 
-// // Scroll To Top
-// $(document).ready(function() {
-//     // show hide button on scroll
-//     $(window).scroll(function() {
-//         if ($(this).scrollTop() > 200) {
-//             $('.scrollToTop').addClass('fade-in');
-//         } else {
-//             $('.scrollToTop').removeClass('fade-in');
-//         }
-//     });
+// Click SMOOTH SCROLL
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
   
-//     // smooth scrolling to top
-//     $('.scrollToTop').click(function() {
-//         $('html,body').animate({
-//             scrollTop: 0
-//         })
-//     })
-//   });
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 800);
+  });
 
 
 // Scroll To Top
